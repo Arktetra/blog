@@ -11,7 +11,7 @@
 			const div = document.createElement('div');
 			div.textContent = heading.textContent;
 			if (heading.tagName === "H3") {
-				div.style.textIndent = "1em";
+				div.style.paddingLeft = "2em";
 			}
 			div.addEventListener("click", function() {
 				heading.scrollIntoView({ behavior: "smooth" });
