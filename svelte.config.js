@@ -4,8 +4,11 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { escapeSvelte, mdsvex } from 'mdsvex';
 import { createHighlighter } from 'shiki';
 
+
 import remarkMath from 'remark-math';
 import rehypeMathjax from 'rehype-mathjax';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
@@ -32,8 +35,8 @@ const mdsvexOptions = {
 			return `{@html \`${html}\` }`;
 		}
 	},
-	remarkPlugins: [remarkMath],
-	rehypePlugins: [rehypeMathjax]
+	remarkPlugins: [[remarkToc, { tight: true }], remarkMath],
+	rehypePlugins: [rehypeSlug, rehypeMathjax]
 }
 
 /** @type {import('@sveltejs/kit').Config} */
