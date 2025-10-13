@@ -87,9 +87,9 @@
 		min-width: 800px;
 	}
 
-	hgroup {
-		width: 100%;
-	}
+	/* hgroup { */
+	/* 	width: 100%; */
+	/* } */
 
 
 	#toc {
@@ -101,7 +101,7 @@
 	}
 
 	hgroup {
-		width: 950px;
+		width: auto;
 	}
 
 	h1 {
@@ -126,4 +126,5 @@
 		padding: var(--size-2) var(--size-3);
 		border-radius: var(--radius-round);
 	}
+
 </style>

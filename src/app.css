@@ -109,8 +109,9 @@ body {
 	height: 100vh;
 	background: var(--background);
 	font-family: Crimson, Georgia, serif;
-	max-width: 100%;
+	width: 100%;
 	/* overflow-x: hidden; */
+	/* overflow-wrap: break-word; */
 }
 
 html {
@@ -302,4 +303,24 @@ mjx-container::-webkit-scrollbar-track {
 mjx-container::-webkit-scrollbar-thumb {
 	background: var(--surface-4);
 	border-radius: 5px;
+}
+
+@media screen and (max-width: 1530px) {
+	#toc {
+		display: none;
+	}
+
+	.content {
+		display: block !important;
+		/* max-width: 100% !important; */
+	}
+
+
+	/* article { */
+	/* 	max-width: 100% !important; */
+	/* } */
+	/**/
+	/* .prose { */
+	/* 	width: 100% !important; */
+	/* } */
 }

@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import * as config from '$lib/config';
 	import Toggle from './toggle.svelte';
 </script>
 
 <nav>
 	<div class="menu">
-		<a href="{base}/" class="title">
+		<a href="https://arktetra.github.io" class="title">
 			<b>{config.title}</b>
 		</a>
 
 		<ul class="links">
-			<Toggle />
+			<li><a href="https://arktetra.github.io/neural-flux">Blog</a></li>
+			<li>Reading List</li>
+			<li><Toggle /></li>
 		</ul>
 	</div>
 </nav>
@@ -31,6 +32,12 @@
 		margin-left: 0;
 		border-bottom: 1px solid var(--border);
 		/* align-items: center; */
+	}
+
+	nav ul {
+		list-style: none;
+		align-items: center;
+		color: var(--text-1);
 	}
 
 	.menu {
