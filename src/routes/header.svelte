@@ -10,7 +10,7 @@
 		</a>
 
 		<ul class="links">
-			<li><a href="https://arktetra.github.io/neural-flux">Blog</a></li>
+			<li><a href="https://arktetra.github.io/blog">Blog</a></li>
 			<li>Reading List</li>
 			<li><Toggle /></li>
 		</ul>
