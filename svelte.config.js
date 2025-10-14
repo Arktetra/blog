@@ -47,7 +47,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === "production" ? "/neural-flux" : "",
+			base: process.env.NODE_ENV === "production" ? "/blog" : "",
 			relative: false
 		},
 		prerender: {
