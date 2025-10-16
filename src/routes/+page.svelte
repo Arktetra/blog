@@ -13,7 +13,7 @@
 	<ul class="posts">
 		{#each data.data.posts as post}
 			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
+				<h1><a href={post.slug} class="title">{post.title}</a></h1>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
 			</li>
@@ -24,41 +24,46 @@
 <style>
 	.posts {
 		display: grid;
-		gap: var(--size-7);
 		justify-items: center;
-		padding-inline: var(--size-7);
+		padding-inline: calc(8px + 1.5625vw);
 	}
 
 	.post {
-		/* max-inline-size: var(--size-content-7); */
-		max-inline-size: 1096px;
+		max-inline-size: var(--content-size);
+		padding-block: 1.5em;
+		border-bottom: 0.1em solid var(--border);
 		width: 100%;
 
-		> a {
+		h1 a {
 			color: inherit;
 			text-decoration: none;
 		}
 	}
 
-	.post:not(:last-child) {
-		border-bottom: 1px solid var(--border);
-		padding-bottom: var(--size-7);
-	}
-
 	.title {
-		font-size: var(--font-size-fluid-3);
 		text-transform: capitalize;
 	}
 
 	.date {
-		color: var(--text-2);
+		margin-block: 0.5em;
 	}
 
+	.date,
 	.description {
-		margin-top: var(--size-3);
+		color: var(--text-2);
 	}
 
 	li {
 		list-style-type: none;
+	}
+
+	h1 {
+		font-size: 2.96rem;
+	}
+
+	@media screen and (max-width: 628px) {
+		h1 {
+			font-size: 2rem;
+		}
 	}
 </style>
