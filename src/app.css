@@ -71,6 +71,8 @@ html {
 	--theme-color-shade: var(--blue-4);
 	--theme-block-quote: var(--blue-5);
 	--tag-color: var(--blue-5);
+	--track-color: var(--blue-5);
+	--thumb-color: var(--blue-3);
 
 	--border: var(--theme-color-shade);
 }
@@ -87,6 +89,8 @@ html {
 	--theme-color-shade: var(--blue-2);
 	--theme-block-quote: var(--blue-1);
 	--tag-color: var(--blue-2);
+	--track-color: var(--blue-1);
+	--thumb-color: var(--blue-3);
 
 	--border: var(--theme-color-shade);
 }
@@ -126,17 +130,20 @@ mjx-container[jax="SVG"][display="true"] {
 	max-width: 100%;
 }
 
+.prose :is(pre)::-webkit-scrollbar,
 mjx-container::-webkit-scrollbar {
 	height: 5px;
 }
 
+.prose :is(pre)::-webkit-scrollbar-track,
 mjx-container::-webkit-scrollbar-track {
-	background: var(--surface-3); 
+	background: var(--track-color);
 }
 
+.prose :is(pre)::-webkit-scrollbar-thumb,
 mjx-container::-webkit-scrollbar-thumb {
-	background: var(--surface-4);
-	border-radius: 5px;
+	background: var(--thumb-color);
+	border-radius: 1rem;
 }
 
 .prose blockquote {
@@ -213,6 +220,25 @@ h3 {
 	text-decoration-style: solid;
 }
 
+.prose :is(pre) {
+	margin-inline: auto;
+	margin-block: 1rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	tab-size: 4;
+	width: 0px;
+	min-width: 90%;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.prose :is(img) {
+	max-width: 100%;
+	display: block;
+	margin-block: 1rem;
+	margin-inline: auto;
+}
+
 #toc p {
 	padding-block: 1rem 0.5rem;
 	line-height: 1.4;
@@ -223,7 +249,6 @@ h3 {
 #toc div {
 	width: 100%;
 	color: var(--theme-color-base);
-	/* font-style: italic; */
 	text-decoration: underline;
 	text-decoration-style: solid;
 	padding-inline-start: 1rem;

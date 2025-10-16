@@ -135,8 +135,13 @@
 			max-inline-size: var(--content-size);
 		}
 
+		/* .prose { */
+		/* 	max-inline-size: 75ch; */
+		/* } */
+
 		#toc {
 			max-inline-size: 20ch;
+			min-inline-size: 15ch;
 		}
 	}
 </style>
