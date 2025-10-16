@@ -118,12 +118,11 @@ h1 {
 mjx-container[jax=SVG] a g {
     fill: var(--text-2);
     stroke: var(--text-1);
-	/* width: 100%; */
-	/* overflow-x: auto; */
 }
 
 mjx-container[jax="SVG"][display="true"] {
 	/* width: 10px; */
+	margin-block: 1rem;
 	width: 0px;
 	overflow-x: auto;
 	min-width: 100% !important;
@@ -164,12 +163,13 @@ mjx-container::-webkit-scrollbar-thumb {
 }
 
 .prose :is(h3) {
-	margin-block: 1rem 0.5rem;
+	margin-block: 1.5rem 0.5rem;
 	font-style: italic;
 }
 
 .prose {
 	counter-reset: heading;
+	color: var(--text-2);
 }
 
 h2:after {
@@ -198,7 +198,7 @@ h3 {
 .prose :is(p) {
 	line-height: 1.65;
 	text-align: justify;
-	color: var(--text-2);
+	margin-block: 1rem;
 }
 
 .prose :is(ul, ol) {
@@ -247,7 +247,6 @@ h3 {
 }
 
 #toc div {
-	width: 100%;
 	color: var(--theme-color-base);
 	text-decoration: underline;
 	text-decoration-style: solid;

@@ -104,6 +104,7 @@
 		border-radius: 2rem;
 		padding-inline: calc(2px + 0.56vw);
 		padding-block: 0.2rem;
+		color: var(--text-2);
 	}
 
 	.content {
