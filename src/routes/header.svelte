@@ -14,60 +14,12 @@
 			<li>Reading List</li>
 			<li><Toggle /></li>
 		</ul>
-		<!-- <div class="ham-menu"> -->
-		<!-- 	<span></span> -->
-		<!-- 	<span></span> -->
-		<!-- 	<span></span> -->
-		<!-- </div> -->
-		<!-- <div class="offscreen-menu"> -->
-		<!-- 	<div><a href="http://arktetra.github.io/blog">Blog</a></div> -->
-		<!-- 	<div>Reading List</div> -->
-		<!-- 	<div class="theme"></div> -->
-		<!-- </div> -->
 	</div>
 </nav>
 
 <style>
-	/* a { */
-	/* 	color: inherit; */
-	/* 	text-decoration: none; */
-	/* } */
-	/**/
-	/* nav { */
-	/* 	display: flex; */
-	/* 	justify-content: center; */
-	/* 	padding: calc(8px + 1.5625vw); */
-	/* 	margin-left: 0; */
-	/* 	border-bottom: 1px solid var(--border); */
-	/* } */
-	/**/
-	/* nav ul { */
-	/* 	list-style: none; */
-	/* 	align-items: center; */
-	/* 	color: var(--text-1); */
-	/* } */
-	/**/
-	/* .menu { */
-	/* 	display: flex; */
-	/* 	justify-content: space-between; */
-	/* 	align-items: center; */
-	/* 	width: 100%; */
-	/* 	max-inline-size: 1096px; */
-	/* 	align-items: center; */
-	/* } */
-	/**/
-	/* .links { */
-	/* 	display: flex; */
-	/* 	gap: var(--size-7); */
-	/* 	margin-block: 0; */
-	/* } */
-	/**/
-	/* .title { */
-	/* 	font-size: 24px; */
-	/* } */
-
 	nav {
-		border-bottom: 0.1rem solid var(--theme-color-shade);
+		border-bottom: 1px solid var(--theme-color-shade);
 	}
 
 	a {
@@ -93,11 +45,17 @@
 		transform: scaleX(1);
 	}
 
+	.title {
+		font-size: 2rem;
+		color: var(--theme-color-base);
+	}
+
 	.menu {
 		display: flex;
 		justify-content: space-between;
 		margin-inline: auto;
 		padding: calc(8px + 1.5625vw);
+		align-items: center;
 	}
 
 	ul {

@@ -28,13 +28,17 @@
 		padding-inline: calc(8px + 1.5625vw);
 	}
 
+	.post:not(:last-child) {
+		border-bottom: 1px solid var(--border);
+	}
+
 	.post {
 		max-inline-size: var(--content-size);
 		padding-block: 1.5em;
-		border-bottom: 0.1em solid var(--border);
 		width: 100%;
 
 		h1 a {
+			/* color: var(--theme-color-base); */
 			color: inherit;
 			text-decoration: none;
 		}
