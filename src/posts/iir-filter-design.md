@@ -119,7 +119,7 @@ To design an IIR filter given the filter specificatoins ($\omega_p$, $\omega_s$,
 
 ### Example
 
-> **Example 1:** Design a DT filter with the following spectifications: $\omega_p = 0.2\pi, \omega_s = 0.3\pi, 1 - \delta_1 = 0.89125,$ and $d_2 = 0.17783$.
+> **Example 1:** Design a DT filter with the following spectifications: $\omega_p = 0.2\pi$, $\omega_s = 0.3\pi$, $1 - \delta_1 = 0.89125,$ and $d_2 = 0.17783$.
 >
 > The required DT filter is designed below:
 > 1. Choose $T_s = 1$ and determine the analog frequencies
