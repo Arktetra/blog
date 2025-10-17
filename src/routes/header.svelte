@@ -189,6 +189,7 @@
 	}
 
 	#overlay {
+		display: none;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -199,6 +200,7 @@
 	}
 
 	#overlay.active {
+		display: block;
 		background-color: rgba(0, 0, 0, 0.6);
 	}
 
