@@ -206,17 +206,17 @@ h3 {
 
 .prose :is(ul, ol) {
 	padding-inline-start: 2.5rem;
-	padding-block: 1rem;
 }
 
 .prose li {
 	padding-block: 0.25rem;
+	line-height: 1.65;
 }
 
 .prose a {
 	color: var(--theme-color-base);
 	font-style: italic;
-	text-decoration-style: dotted;
+	/* text-decoration-style: dotted; */
 	min-width: 80%;
 	max-width: 100%;
 }
