@@ -23,12 +23,13 @@
 		<link href="/blog/_app/immutable/assets/expectation.D9IfHjYa.css" rel="stylesheet">
 		<link href="/blog/_app/immutable/assets/fir-filter-design.BpD3KLXQ.css" rel="stylesheet">
 		<link href="/blog/_app/immutable/assets/iir-filter-design.D_Rr6PS_.css" rel="stylesheet">
+		<link href="/blog/_app/immutable/assets/submanifold-conv-1.CU8if36O.css" rel="stylesheet">
 		<link href="/blog/_app/immutable/assets/the-fourier-transform.AicsFNm6.css" rel="stylesheet">
-		<link rel="modulepreload" href="/blog/_app/immutable/entry/start.r6WVvlNH.js">
-		<link rel="modulepreload" href="/blog/_app/immutable/chunks/vpBqJBKT.js">
+		<link rel="modulepreload" href="/blog/_app/immutable/entry/start.DZH9sBbc.js">
+		<link rel="modulepreload" href="/blog/_app/immutable/chunks/BS4zcqh1.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/DcWVWplB.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/D5Pnjk6e.js">
-		<link rel="modulepreload" href="/blog/_app/immutable/entry/app.DDRs_3Zv.js">
+		<link rel="modulepreload" href="/blog/_app/immutable/entry/app.Bn957rs8.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/BOZoiXnr.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/DKmiwHyo.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/DaMdvn4X.js">
@@ -36,8 +37,8 @@
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/DP7nPqhg.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/B14ZM53J.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/DJIjHiE7.js">
-		<link rel="modulepreload" href="/blog/_app/immutable/nodes/3.BCMqYsfg.js">
-		<link rel="modulepreload" href="/blog/_app/immutable/chunks/BwLfGONH.js">
+		<link rel="modulepreload" href="/blog/_app/immutable/nodes/3.DjzsBOL8.js">
+		<link rel="modulepreload" href="/blog/_app/immutable/chunks/ClAkkHXX.js">
 		<link rel="modulepreload" href="/blog/_app/immutable/chunks/3InfNRpA.js"><!--[--><meta property="og:type" content="article"/> <meta property="og:title" content="The Discrete Fourier Transform"/><!--]--><title>The Discrete Fourier Transform</title>
     </head>
     <body data-sveltekit-preload-data="hover">
@@ -88,11 +89,11 @@
 <span class="line"></span>
 <span class="line"><span style="color:#CDD6F4">img_dft2_lin_comb </span><span style="color:#94E2D5">=</span><span style="color:#9399B2"> (</span><span style="color:#CDD6F4">img_np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">reshape</span><span style="color:#9399B2">(</span><span style="color:#FAB387">1</span><span style="color:#9399B2">,</span><span style="color:#FAB387"> 1</span><span style="color:#9399B2">,</span><span style="color:#94E2D5"> -</span><span style="color:#FAB387">1</span><span style="color:#9399B2">)</span><span style="color:#94E2D5"> *</span><span style="color:#CDD6F4"> bases_np</span><span style="color:#9399B2">).</span><span style="color:#89B4FA">sum</span><span style="color:#9399B2">(</span><span style="color:#EBA0AC;font-style:italic">axis</span><span style="color:#94E2D5">=</span><span style="color:#FAB387">2</span><span style="color:#9399B2">).</span><span style="color:#89B4FA">reshape</span><span style="color:#9399B2">(</span><span style="color:#FAB387">4</span><span style="color:#9399B2">,</span><span style="color:#FAB387"> 4</span><span style="color:#9399B2">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CDD6F4">plt</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">matshow</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">log</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">abs</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_dft2_lin_comb</span><span style="color:#9399B2">)</span><span style="color:#94E2D5">**</span><span style="color:#FAB387">2</span><span style="color:#9399B2">))</span></span></code></pre><!----> <p><img src="fourier/checker_dft2_lin_comb.png" alt="Checker DFT Linear Combination"/></p> <p>Let us again compare it with the fast Fourier transform from numpy to verify that it is correct.</p> <!----><pre class="shiki catppuccin-mocha" style="background-color:#1e1e2e;color:#cdd6f4" tabindex="0"><code><span class="line"><span style="color:#FAB387;font-style:italic">print</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">isclose</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_dft2_lin_comb</span><span style="color:#9399B2">,</span><span style="color:#CDD6F4"> np</span><span style="color:#9399B2">.</span><span style="color:#CDD6F4">fft</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">fft2</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_np</span><span style="color:#9399B2">)).</span><span style="color:#89B4FA">all</span><span style="color:#9399B2">())</span></span></code></pre><!----> <!----><pre class="shiki catppuccin-mocha" style="background-color:#1e1e2e;color:#cdd6f4" tabindex="0"><code><span class="line"><span style="color:#89B4FA;font-style:italic">np.True_</span></span></code></pre><!----> <p>This means that our implementation is correct.</p> <h2 id="references">References</h2> <ul><li><a href="https://math.stackexchange.com/questions/1113398/discrete-fourier-transfomation-and-harmonics" rel="nofollow">https://math.stackexchange.com/questions/1113398/discrete-fourier-transfomation-and-harmonics</a></li> <li><a href="https://databookuw.com/" rel="nofollow">https://databookuw.com/</a></li></ul><!----></div> <div id="toc" class="svelte-jot9ci"><p>Contents</p></div></div></article><!----><!----><!----></div><!----><!----></main> <footer class="svelte-1k4qkoz"><p class="svelte-1k4qkoz">ArkTetra © 2025</p></footer><!----></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+<span class="line"><span style="color:#CDD6F4">plt</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">matshow</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">log</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">abs</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_dft2_lin_comb</span><span style="color:#9399B2">)</span><span style="color:#94E2D5">**</span><span style="color:#FAB387">2</span><span style="color:#9399B2">))</span></span></code></pre><!----> <p><img src="fourier/checker_dft2_lin_comb.png" alt="Checker DFT Linear Combination"/></p> <p>Let us again compare it with the fast Fourier transform from numpy to verify that it is correct.</p> <!----><pre class="shiki catppuccin-mocha" style="background-color:#1e1e2e;color:#cdd6f4" tabindex="0"><code><span class="line"><span style="color:#FAB387;font-style:italic">print</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">np</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">isclose</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_dft2_lin_comb</span><span style="color:#9399B2">,</span><span style="color:#CDD6F4"> np</span><span style="color:#9399B2">.</span><span style="color:#CDD6F4">fft</span><span style="color:#9399B2">.</span><span style="color:#89B4FA">fft2</span><span style="color:#9399B2">(</span><span style="color:#CDD6F4">img_np</span><span style="color:#9399B2">)).</span><span style="color:#89B4FA">all</span><span style="color:#9399B2">())</span></span></code></pre><!----> <!----><pre class="shiki catppuccin-mocha" style="background-color:#1e1e2e;color:#cdd6f4" tabindex="0"><code><span class="line"><span style="color:#89B4FA;font-style:italic">np.True_</span></span></code></pre><!----> <p>This means that our implementation is correct.</p> <h2 id="references">References</h2> <ul><li><a href="https://math.stackexchange.com/questions/1113398/discrete-fourier-transfomation-and-harmonics" rel="nofollow">https://math.stackexchange.com/questions/1113398/discrete-fourier-transfomation-and-harmonics</a></li> <li><a href="https://databookuw.com/" rel="nofollow">https://databookuw.com/</a></li></ul><!----></div> <div id="toc" class="svelte-jot9ci"><p>Contents</p></div></div></article><!----><!----><!----></div><!----><!----></main> <footer class="svelte-1k4qkoz"><p class="svelte-1k4qkoz">ArkTetra © 2026</p></footer><!----></div><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1svpddc = {
+					__sveltekit_j0jf9w = {
 						base: "/blog",
 						assets: "/blog"
 					};
@@ -100,8 +101,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/blog/_app/immutable/entry/start.r6WVvlNH.js"),
-						import("/blog/_app/immutable/entry/app.DDRs_3Zv.js")
+						import("/blog/_app/immutable/entry/start.DZH9sBbc.js"),
+						import("/blog/_app/immutable/entry/app.Bn957rs8.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],
