@@ -21,9 +21,23 @@ This problem can be solved by making a site in the output active by only conside
 
 ![Submanifold Convolution](spconv/submanifold-conv.png)
 
+## Sparse Tensor
+
+Before we delve into the implementation overview, let us look at the representation of a sparse feature map as a sparse tensor:
+
+![Sparse Tensor Representation](spconv/sparse-tensor-representation.png)
+
+The sparse tensor representation of the feature map has:
+
+1. A $N \times d$ **coords tensor** of the active sites in the original feature map. Here, $N$ is the number of active sites, and $d$ is the number of spatial dimension in the original feature map. In our above example, $N = 3$ and $d = 2$ for width $W$ and height $H$.
+2. A $N \times C_{\text{in}}$ **features tensor** consisting of feature vectors corresponding to the coords. Here, $C_\text{in}$ is the number of input channels, which is $2$ in our above example.
+
+Although not shown in the above example, the sparse tensor representation also consists of information related to the shape of the original feature map.
+
 ## Implementation
 
 To implement submanifold convolution efficiently, we need a way to fetch the neighbors of the active sites. For this purpose, we do the following two things:
 
-1. Create a hash map with the active sites as keys and the corresponding feature vector as the values.
+1. Create a hash map that maps each index in the coords to the index in the flattened original feature map.
+    ![Hash Map](spconv/hashmap.png)
 2. Use the hash map to create a neighbor map. For each active sites, the neighbor map contains the location of its active neighbors.
