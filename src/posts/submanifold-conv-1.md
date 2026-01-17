@@ -38,6 +38,20 @@ Although not shown in the above example, the sparse tensor representation also c
 
 To implement submanifold convolution efficiently, we need a way to fetch the neighbors of the active sites. For this purpose, we do the following two things:
 
-1. Create a hash map that maps each index in the coords to the index in the flattened original feature map.
+1. Create a hash map that maps each index in the coords to the index in the flattened original feature map. (This will be explained in part 2)
     ![Hash Map](spconv/hashmap.png)
-2. Use the hash map to create a neighbor map. For each active sites, the neighbor map contains the location of its active neighbors.
+2. Use the hash map to create a neighbor map. For each active sites, the neighbor map contains the location of its active neighbors. (This will be explained in part 3)
+    ![Neighbor Map](spconv/neighbor-map.png)
+
+Once we have a way to fetch the neighbors, we can apply the convolution algorithm to obtain the result. We will be looking into the following convolution algorithms:
+
+1. Explicit GEMM
+2. Implicit GEMM
+3. Implicit GEMM Split-k
+4. Masked Implicit GEMM
+5. Masked Implicit GEMM Split-k
+
+## References
+
+- [Submanifold Sparse Convolutional Networks](https://arxiv.org/abs/1706.01307)
+- [FlexGEMM: A Cross-Platform Backend for High-Performance Sparse Convolutions](https://jeffreyxiang.github.io/en/blogs/flexgemm)
