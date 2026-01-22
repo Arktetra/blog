@@ -98,6 +98,11 @@
 		padding-block: calc(2px + 0.56vw);
 	}
 
+	.tags {
+		display: flex;
+		gap: 0.25em;
+	}
+
 	.tags > * {
 		/* background-color: var(--theme-color-shade); */
 		background-color: var(--tag-color);
