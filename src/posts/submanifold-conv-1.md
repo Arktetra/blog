@@ -38,7 +38,7 @@ Although not shown in the above example, the sparse tensor representation also c
 
 To implement submanifold convolution efficiently, we need a way to fetch the neighbors of the active sites. For this purpose, we do the following two things:
 
-1. Create a hash map that maps each index in the coords to the index in the flattened original feature map. (This will be explained in part 2)
+1. Create a hash map that maps each active index in the flattened original feature map to an index in the coords (This will be explained in part 2)
     ![Hash Map](spconv/hashmap.png)
 2. Use the hash map to create a neighbor map. For each active sites, the neighbor map contains the location of its active neighbors. (This will be explained in part 3)
     ![Neighbor Map](spconv/neighbor-map.png)
